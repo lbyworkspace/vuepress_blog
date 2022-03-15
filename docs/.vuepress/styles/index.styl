@@ -1,0 +1,78 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb:active{
+  -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+      background-color: #b9b9b9 !important;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-blog .hero{
+    font-family: Long Cang,cursive!important;
+    margin-top: 0 !important;
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh !important;
+    background url('https://workdomain.cloud/bg3.jpg') center/cover !important;
+}
+
+.hero>div{
+    transform: translateY(50px)
+}
+
+.navbar{
+    position: absolute !important;
+    background-color: transparent !important;
+}
+
+.navbar .links{
+    background-color: transparent!important;    
+}
+
+// .iconfont{
+//     color: #fff !important;
+// }
+
+.site-name{
+    color: #606266 !important;
+}
+
+.sidebar-button{
+    color: #fff !important;    
+}
+
+a.router-link-active{
+    color: #fff !important;    
+}
+
+@media (max-width: 719px){
+    .footer>span:first-child{
+        display: none !important;
+    }    
+}
+
+.footer>span:first-child{
+    display: none
+}
+
+.reco-copyright + a>span::before{
+    content: '@';
+}
+
+.dropdown-title{
+    // color: white !important;
+}
