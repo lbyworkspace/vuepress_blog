@@ -1,4 +1,5 @@
 window.onload  = function () {
+
     function getRandomColor(max, min) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -29,8 +30,5 @@ window.onload  = function () {
         })
     }
 
-    document.querySelector('.site-name').addEventListener('click',()=>{
-        document.body.scrollIntoView(false)
-    })
-
 }
+

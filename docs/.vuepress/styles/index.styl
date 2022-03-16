@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "my";
+  src: url("/font/font3.otf");
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -16,7 +21,7 @@
 /*定义滑块 内阴影+圆角*/
 
 ::-webkit-scrollbar-thumb {
-      background-color: #b9b9b9 !important;
+    background-color: #b9b9b9 !important;
   border-radius: 10px;
   -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
@@ -27,11 +32,11 @@
     position: relative;
     box-sizing: border-box;
     height: 100vh !important;
-    background url('https://workdomain.cloud/bg3.jpg') center/cover !important;
+    background url('/img/bg.png') center/cover !important;
 }
 
 .hero>div{
-    transform: translateY(50px)
+    transform: translateY(60px)
 }
 
 .navbar{
@@ -39,24 +44,71 @@
     background-color: transparent !important;
 }
 
+.nav-item{
+    font-family: 'my' 
+    color: #7f7f7f !important;   
+}
+
+.nav-link,.dropdown-title,.iconfont{ 
+    color: inherit !important;
+}
+
+.sidebar .nav-links a{
+    font-weight: normal !important;
+}
+
 .navbar .links{
     background-color: transparent!important;    
 }
 
-// .iconfont{
-//     color: #fff !important;
-// }
+.search-box input:focus{
+    border-color: #7f7f7f !important;   
+}
+
+.search-box input{
+    color: #7f7f7f !important;  
+}
+
+.reco-search,.sidebar-button{
+    color: #7f7f7f !important;
+}
+
+.site-name,.description,.hero h1{
+    font-family: my
+    pointer-events: none;
+}
 
 .site-name{
-    color: #606266 !important;
+    color: #7f7f7f !important;    
 }
 
-.sidebar-button{
-    color: #fff !important;    
+.description::after{
+    position: absolute;
+    top: 400%;
+    left: 50%;
+    content: '';
+    display: block;
+    border-right: 6px solid #242424;
+    border-bottom: 6px solid #242424;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%)  rotate(45deg)
+    border-radius: 6px;
+    animation: custom 2.5s linear infinite alternate;
+    cursor pointer;
+    pointer-events: auto;
 }
 
-a.router-link-active{
-    color: #fff !important;    
+@keyframes custom {
+    0%{
+        top: 400%;
+    }
+    50%{
+        top: 450%
+    }
+    100%{
+        top: 400%    
+    }
 }
 
 @media (max-width: 719px){
@@ -71,8 +123,4 @@ a.router-link-active{
 
 .reco-copyright + a>span::before{
     content: '@';
-}
-
-.dropdown-title{
-    // color: white !important;
 }

@@ -1,19 +1,24 @@
-###### springboot中redis缓存
+---
+title: Redis 应用问题解决
+date: '2022-3-5'
+sidebar: 'auto'
+categories:
+ - 系列教程
+tags:
+ - Redis
+---
 
+## Redis 应用问题解决
 ### 依赖注入
 
 ```java
 <dependency>
     <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-cache</artifactId>
-</dependency>
-<dependency>
-    <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-redis</artifactId>
-    <version>2.5.2</version>
 </dependency>
 ```
 
+## Redis 应用问题解决
 ### 配置redis序列化
 
 ```java

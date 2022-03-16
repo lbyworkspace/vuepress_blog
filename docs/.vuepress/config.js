@@ -4,14 +4,7 @@ module.exports = {
     theme:'reco',
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-        ['script', { src:'/js/bodyclick.js'}],
-        [
-            "link",
-            {
-                "rel": "icon",
-                "href": "https://www.zpzpup.com/assets/image/favicon.ico"
-            }
-        ],
+        ['script', { src:'/js/bodyclick.js'}]
     ],
     themeConfig: {
         noFoundPageByTencent: false,
@@ -26,6 +19,13 @@ module.exports = {
         startYear: "2021",
         subSidebar: 'auto',
         smoothScroll: true,
+        blogConfig: {
+            tag: {
+                location: 2,
+                text: '博客',
+                icon:'reco-blog'
+            }
+        },
         nav: [
             {
                 text: "首页",
@@ -33,17 +33,33 @@ module.exports = {
                 icon: "reco-home"
             },
             {
-                text: "博客",
-                link: "/"
-            },
-            {
                 text: "教程",
                 icon:'reco-category',
                 items:[
+                    // {
+                    //     text: "Web前端",
+                    //     link: "/blogs/web/one"
+                    // },
+                    // {
+                    //     text: "Java",
+                    //     link: "/blogs/web/one"
+                    // },
                     {
-                        text: "Web",
-                        link: "/blogs/web/"
+                        text: "Docker",
+                        link: "/blogs/docker/docker安装"
                     },
+                    // {
+                    //     text: "Mysql",
+                    //     link: "/blogs/web/one"
+                    // },
+                    // {
+                    //     text: "Maven",
+                    //     link: "/blogs/web/one"
+                    // },
+                    // {
+                    //     text: "Spring全家桶",
+                    //     link: "/blogs/web/one"
+                    // }
                 ]
             }
         ],
@@ -65,13 +81,18 @@ module.exports = {
                         'one','two'
                     ]
                 },
+            ],
+            '/blogs/docker/':[
+                {
+                    title:'Docker',
+                    collapsable:false,
+                    children:[
+                        'docker安装','docker基本命令','dockerfile编写'
+                    ]
+                },
             ]
         }
     },
-    // markdown: {
-    //     lineNumbers: true,
-    //     extractHeaders: [ 'h2' ]
-    // },
     plugins:[
         [
           "dynamic-title",
@@ -79,9 +100,18 @@ module.exports = {
             showIcon: "/img/favicon.ico",
             showText: "欢迎回到",
             hideIcon: "/img/favicon.ico",
-            hideText: "失联中......快回来~",
+            hideText: "亲亲,快回来~",
             recoverTime: 2000
           }
         ],
+        ['@vuepress/medium-zoom', {
+            selector: '.page img',
+            options: {
+                margin: 80,
+                scrollOffset: 0,
+                background: 'rgba(25,18,25,0.9)',
+                scrollOffset: 75,
+            },
+        }]
     ]
 }
