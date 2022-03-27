@@ -1,5 +1,5 @@
 module.exports = {
-    author:'阿元',
+    author:'阿元搞全栈',
     title:'BaoStudy',
     theme:'reco',
     head: [
@@ -17,13 +17,13 @@ module.exports = {
         cyberSecurityRecord:'粤ICP备2021021642号',
         cyberSecurityLink:'https://beian.miit.gov.cn',
         startYear: "2021",
-        subSidebar: 'auto',
         smoothScroll: true,
+        subSidebar: 'auto',
         blogConfig: {
             tag: {
                 location: 2,
-                text: '博客',
-                icon:'reco-blog'
+                text: '标签',
+                icon:'reco-tag'
             }
         },
         nav: [
@@ -36,40 +36,35 @@ module.exports = {
                 text: "教程",
                 icon:'reco-category',
                 items:[
-                    // {
-                    //     text: "Web前端",
-                    //     link: "/blogs/web/one"
-                    // },
-                    // {
-                    //     text: "Java",
-                    //     link: "/blogs/web/one"
-                    // },
                     {
                         text: "Docker",
                         link: "/blogs/docker/docker安装"
-                    },
-                    // {
-                    //     text: "Mysql",
-                    //     link: "/blogs/web/one"
-                    // },
-                    // {
-                    //     text: "Maven",
-                    //     link: "/blogs/web/one"
-                    // },
-                    // {
-                    //     text: "Spring全家桶",
-                    //     link: "/blogs/web/one"
-                    // }
+                    }
                 ]
             }
         ],
         sidebar:{
-            '/blogs/java/':[
+            '/blogs/Java/':[
+                'JAVA简介',
                 {
-                    title:'JAVA',
-                    collapsable:false,
+                    title:'Java初级',
+                    collapsable:true,
                     children:[
-                        'one','two'
+                        'HelloWord','面向对象','类型和变量','操作符','数组','类和对象'
+                    ]
+                },
+                {
+                    title:'Java中级',
+                    collapsable:true,
+                    children:[
+                        '异常处理','集合框架','泛型','多线程','JDBC','Lambda'
+                    ]
+                },
+                {
+                    title:'Java高级',
+                    collapsable:true,
+                    children:[
+                        '反射机制','注解'
                     ]
                 },
             ],
@@ -83,11 +78,12 @@ module.exports = {
                 },
             ],
             '/blogs/docker/':[
+                'dockerfile编写',
                 {
                     title:'Docker',
                     collapsable:false,
                     children:[
-                        'docker安装','docker基本命令','dockerfile编写'
+                        'docker安装','docker基本命令'
                     ]
                 },
             ]

@@ -1,7 +1,6 @@
 ---
 title: Dockerfile编写
 date: '2022-3-16'
-sidebar: 'auto'
 categories:
  - 教程
 tags:

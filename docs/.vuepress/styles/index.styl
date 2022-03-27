@@ -1,6 +1,6 @@
 @font-face {
   font-family: "my";
-  src: url("/font/font3.otf");
+  src: url("/font/font.otf");
 }
 
 ::-webkit-scrollbar {
@@ -66,7 +66,12 @@
 }
 
 .search-box input{
+    border: 1px solid #7f7f7f !important;
     color: #7f7f7f !important;  
+}
+
+.search-box{
+    // margin-right:1rem;    
 }
 
 .reco-search,.sidebar-button{
@@ -111,16 +116,28 @@
     }
 }
 
-@media (max-width: 719px){
-    .footer>span:first-child{
-        display: none !important;
-    }    
-}
-
 .footer>span:first-child{
     display: none
 }
 
 .reco-copyright + a>span::before{
     content: '@';
+}
+
+@media (max-width: 719px){
+    .footer>span:first-child{
+        display: none !important;
+    }    
+}
+
+@media (max-width: 959px) and (min-width: 719px){
+    .search-box{
+        margin-right: 1rem !important;    
+    }    
+}
+
+@media screen and (max-width:959px) {
+    .search-box input{
+        border-color: transparent !important;
+    }
 }
