@@ -39,10 +39,10 @@ JDK是 Java Development Kit的缩写，java开发工具包，是整个Java的核
 - 变量名：CLASSPATH 变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;      //记得前面有个"."
 - 变量名：Path 变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
 
-JAVA_HOME设置
+**JAVA_HOME设置**
 ![image-20220327163321800](https://workdomain.cloud/picgo/image-20220327163321800.png)
 
-PATH设置
+**PATH设置**
 ![image-20220327163409882](https://workdomain.cloud/picgo/image-20220327163409882.png)
 
 5.配置好之后，WIN+R,打开输入cmd打开命令行，在命令行里输入`java -version`,出现以下信息，说明环境变量配置成功

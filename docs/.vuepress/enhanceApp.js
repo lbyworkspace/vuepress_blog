@@ -7,7 +7,6 @@ export default ({
   }) => {
     router.afterEach((to,form,next)=>{
         if(to.path=='/'){
-            console.log(11)
             const InterVal = setInterval(() => {
                 if(document.getElementsByClassName('description')[1]){
                     document.getElementsByClassName('description')[1].addEventListener('click',function(){

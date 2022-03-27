@@ -3,7 +3,8 @@ module.exports = {
     title:'BaoStudy',
     theme:'reco',
     head: [
-        ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+        // ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
+        ['meta',{ name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['script', { src:'/js/bodyclick.js'}]
     ],
     themeConfig: {
@@ -50,7 +51,7 @@ module.exports = {
                     title:'Java初级',
                     collapsable:true,
                     children:[
-                        'HelloWord','面向对象','类型和变量','修饰符','操作符','数组','类和对象'
+                        'HelloWord','类和对象','类型和变量','修饰符','操作符','控制流程','日期时间'
                     ]
                 },
                 {
