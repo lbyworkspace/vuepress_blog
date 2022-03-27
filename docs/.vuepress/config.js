@@ -9,7 +9,7 @@ module.exports = {
     themeConfig: {
         noFoundPageByTencent: false,
         modePicker:false,
-        lastUpdated:"Last Updated",
+        lastUpdated:"最后更新",
         author:'阿元搞全栈',
         type:'blog',
         authorAvatar: '/img/avatar.png',
@@ -37,20 +37,20 @@ module.exports = {
                 icon:'reco-category',
                 items:[
                     {
-                        text: "Docker",
-                        link: "/blogs/docker/docker安装"
+                        text: "Java",
+                        link: "/blogs/Java/Java简介"
                     }
                 ]
             }
         ],
         sidebar:{
             '/blogs/Java/':[
-                'JAVA简介',
+                'Java简介',
                 {
                     title:'Java初级',
                     collapsable:true,
                     children:[
-                        'HelloWord','面向对象','类型和变量','操作符','数组','类和对象'
+                        'HelloWord','面向对象','类型和变量','修饰符','操作符','数组','类和对象'
                     ]
                 },
                 {
