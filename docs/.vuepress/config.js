@@ -40,6 +40,10 @@ module.exports = {
                     {
                         text: "Java",
                         link: "/blogs/Java/Java简介"
+                    },
+                    {
+                        text: "前端",
+                        link: "/blogs/前端/前端简介"
                     }
                 ]
             }
@@ -51,28 +55,59 @@ module.exports = {
                     title:'Java初级',
                     collapsable:true,
                     children:[
-                        'HelloWord','类和对象','类型和变量','修饰符','操作符','控制流程','日期时间'
+                        'Java初级/HelloWord','Java初级/类和对象','Java初级/类型和变量',
+                        'Java初级/修饰符','Java初级/控制流程','Java初级/数字与字符串',
+                        'Java初级/日期时间','Java初级/面向对象'
                     ]
                 },
                 {
                     title:'Java中级',
                     collapsable:true,
                     children:[
-                        '异常处理','集合框架','泛型','多线程','JDBC','Lambda'
+                        'Java中级/异常处理','Java中级/集合框架','Java中级/泛型','Java中级/多线程','Java中级/JDBC','Java中级/Lambda'
                     ]
                 },
                 {
                     title:'Java高级',
                     collapsable:true,
                     children:[
-                        '反射机制','注解'
+                        'Java高级/反射机制','Java高级/注解'
+                    ]
+                },
+                {
+                    title:'Spring',
+                    collapsable:true,
+                    children:[
+                        'Spring/入门'
                     ]
                 },
             ],
-            '/blogs/web/':[
+            '/blogs/前端/':[
+                '前端简介',
                 {
-                    title:'WEB',
-                    collapsable:false,
+                    title:'HTML',
+                    collapsable:true,
+                    children:[
+                        'one','two'
+                    ]
+                },
+                {
+                    title:'CSS',
+                    collapsable:true,
+                    children:[
+                        'one','two'
+                    ]
+                },
+                {
+                    title:'JavaScript',
+                    collapsable:true,
+                    children:[
+                        'one','two'
+                    ]
+                },
+                {
+                    title:'Vue',
+                    collapsable:true,
                     children:[
                         'one','two'
                     ]
