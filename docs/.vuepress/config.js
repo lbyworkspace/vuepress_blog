@@ -34,22 +34,27 @@ module.exports = {
                 icon: "reco-home"
             },
             {
+                text: "笔记",
+                link: "/notes/笔记前言",
+                icon: "reco-home"
+            },
+            {
                 text: "教程",
                 icon:'reco-category',
                 items:[
                     {
                         text: "Java",
-                        link: "/blogs/Java/Java简介"
+                        link: "/courses/Java/Java简介"
                     },
                     {
                         text: "前端",
-                        link: "/blogs/前端/前端简介"
+                        link: "/courses/前端/前端简介"
                     }
                 ]
             }
         ],
         sidebar:{
-            '/blogs/Java/':[
+            '/courses/Java/':[
                 'Java简介',
                 {
                     title:'Java初级',
@@ -82,7 +87,7 @@ module.exports = {
                     ]
                 },
             ],
-            '/blogs/前端/':[
+            '/courses/前端/':[
                 '前端简介',
                 {
                     title:'Html',
@@ -95,19 +100,13 @@ module.exports = {
                     title:'CSS',
                     collapsable:true,
                     children:[
-                        'Css/Css简介','Css/Css语法','Css/Css选择器'
+                        'Css/Css简介','Css/Css语法','Css/Css选择器','Css/Css样式表','Css/Css基本样式'
                     ]
                 },
             ],
-            '/blogs/docker/':[
-                'dockerfile编写',
-                {
-                    title:'Docker',
-                    collapsable:false,
-                    children:[
-                        'docker安装','docker基本命令'
-                    ]
-                },
+            '/notes/':[
+                '笔记前言',
+                'flowable笔记',
             ]
         }
     },
