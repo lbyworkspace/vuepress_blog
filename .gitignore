@@ -4,3 +4,4 @@ yarn.lock
 yarn.error
 docs/.vuepress/dist
 docs/.vuepress/dist.zip
+docs/.vuepress/.DS_Store

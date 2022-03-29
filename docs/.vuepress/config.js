@@ -95,21 +95,7 @@ module.exports = {
                     title:'CSS',
                     collapsable:true,
                     children:[
-                        'one','two'
-                    ]
-                },
-                {
-                    title:'JavaScript',
-                    collapsable:true,
-                    children:[
-                        'one','two'
-                    ]
-                },
-                {
-                    title:'Vue',
-                    collapsable:true,
-                    children:[
-                        'one','two'
+                        'Css/Css简介','Css/Css语法','Css/Css选择器'
                     ]
                 },
             ],
