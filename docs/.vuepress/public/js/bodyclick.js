@@ -30,5 +30,13 @@ window.onload  = function () {
         })
     }
 
+    setInterval(() => {
+        if(document.getElementsByClassName('description')[1]){
+            document.getElementsByClassName('description')[1].addEventListener('click',function(){
+                window.scrollTo(0,window.innerHeight)
+            })
+        }
+    }, 1000);
+
 }
 

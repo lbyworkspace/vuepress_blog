@@ -2,7 +2,7 @@
 title: Css语法
 date: '2022-3-29'
 categories:
- - 系列教程
+ - 教程
 tags:
  - 前端
  - Css

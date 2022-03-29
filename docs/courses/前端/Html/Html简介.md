@@ -2,7 +2,7 @@
 title: Html简介
 date: '2022-3-28'
 categories:
- - 系列教程
+ - 教程
 tags:
  - 前端
  - Html
