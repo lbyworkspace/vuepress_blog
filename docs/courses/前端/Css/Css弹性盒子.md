@@ -20,15 +20,15 @@ tags:
 ```html
 <style>
     /*设置父元素为flex布局*/
-    .d1{
+    .d2{
         display:flex;
     }
-    .d1 div{
+    .d2 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
-<div class="d1">
+<div class="d2">
     <div>我是第一个div</div>
     <div>我是第二个div</div>
     <div>我是第三个div</div>
@@ -37,15 +37,15 @@ tags:
 ::: details 点击查看效果
 <style>
     /*设置父元素为flex布局*/
-    .d1{
+    .d2{
         display:flex;
     }
-    .d1 div{
+    .d2 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
-<div class="d1">
+<div class="d2">
     <div>我是第一个div</div>
     <div>我是第二个div</div>
     <div>我是第三个div</div>
@@ -62,16 +62,16 @@ flex-direction的值有：
 ```html
 <style>
     /*设置flex布局的排列方向为反方向*/
-    .d1{
+    .d3{
         display:flex;
         flex-direction:row-reverse;
     }
-    .d1 div{
+    .d3 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
-<div class="d1">
+<div class="d3">
     <div>我是第一个div</div>
     <div>我是第二个div</div>
     <div>我是第三个div</div>
@@ -79,17 +79,17 @@ flex-direction的值有：
 ```
 ::: details 点击查看效果
 <style>
-    /*设置父元素为flex布局*/
-    .d2{
+    /*设置flex布局的排列方向为反方向*/
+    .d3{
         display:flex;
         flex-direction:row-reverse;
     }
-    .d2 div{
+    .d3 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
-<div class="d2">
+<div class="d3">
     <div>我是第一个div</div>
     <div>我是第二个div</div>
     <div>我是第三个div</div>
@@ -107,42 +107,42 @@ flex-direction的值有：
 ```html
 <style>
     /*设置父元素为flex布局*/
-    .d3{
+    .d4{
         display:flex;
         padding:5px;
         border:1px solid blue;
     }
-    .d3 div{
+    .d4 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>flex-start效果：</div>
-<div class="d3" style="justify-content:flex-start;">
+<div class="d4" style="justify-content:flex-start;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>flex-end效果：</div>
-<div class="d3" style="justify-content:flex-end;">
+<div class="d4" style="justify-content:flex-end;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>center效果：</div>
-<div class="d3" style="justify-content:center;">
+<div class="d4" style="justify-content:center;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>space-between效果：</div>
-<div class="d3" style="justify-content:space-between;">
+<div class="d4" style="justify-content:space-between;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>space-around效果：</div>
-<div class="d3" style="justify-content:space-around;">
+<div class="d4" style="justify-content:space-around;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
@@ -151,42 +151,42 @@ flex-direction的值有：
 ::: details 点击查看效果
 <style>
     /*设置父元素为flex布局*/
-    .d3{
+    .d4{
         display:flex;
         padding:5px;
         border:1px solid blue;
     }
-    .d3 div{
+    .d4 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>flex-start效果：</div>
-<div class="d3" style="justify-content:flex-start;">
+<div class="d4" style="justify-content:flex-start;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>flex-end效果：</div>
-<div class="d3" style="justify-content:flex-end;">
+<div class="d4" style="justify-content:flex-end;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>center效果：</div>
-<div class="d3" style="justify-content:center;">
+<div class="d4" style="justify-content:center;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>space-between效果：</div>
-<div class="d3" style="justify-content:space-between;">
+<div class="d4" style="justify-content:space-between;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>space-around效果：</div>
-<div class="d3" style="justify-content:space-around;">
+<div class="d4" style="justify-content:space-around;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
@@ -202,30 +202,30 @@ align-items 设置弹性盒子元素在**纵向**上的对齐方式。<br>
 ```html
 <style>
     /*设置父元素为flex布局*/
-    .d4{
+    .d5{
         display:flex;
         padding:5px;
         border:1px solid blue;
     }
-    .d4 div{
+    .d5 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>flex-start效果：</div>
-<div class="d4" style="align-items:flex-start;">
+<div class="d5" style="align-items:flex-start;">
     <div style="height:30px;">div1</div>
     <div style="height:20px;">div2</div>
     <div style="height:50px;">div3</div>
 </div>
 <div>center效果：</div>
-<div class="d4" style="align-items:center;">
+<div class="d5" style="align-items:center;">
     <div style="height:30px;">div1</div>
     <div style="height:20px;">div2</div>
     <div style="height:50px;">div3</div>
 </div>
 <div>flex-end效果：</div>
-<div class="d4" style="align-items:flex-end;">
+<div class="d5" style="align-items:flex-end;">
     <div style="height:30px;">div1</div>
     <div style="height:20px;">div2</div>
     <div style="height:50px;">div3</div>
@@ -234,30 +234,30 @@ align-items 设置弹性盒子元素在**纵向**上的对齐方式。<br>
 ::: details 点击查看效果
 <style>
     /*设置父元素为flex布局*/
-    .d4{
+    .d5{
         display:flex;
         padding:5px;
         border:1px solid blue;
     }
-    .d4 div{
+    .d5 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>flex-start效果：</div>
-<div class="d4" style="align-items:flex-start;">
+<div class="d5" style="align-items:flex-start;">
     <div style="height:30px;">div1</div>
     <div style="height:20px;">div2</div>
     <div style="height:50px;">div3</div>
 </div>
 <div>center效果：</div>
-<div class="d4" style="align-items:center;">
+<div class="d5" style="align-items:center;">
     <div style="height:30px;">div1</div>
     <div style="height:20px;">div2</div>
     <div style="height:50px;">div3</div>
 </div>
 <div>flex-end效果：</div>
-<div class="d4" style="align-items:flex-end;">
+<div class="d5" style="align-items:flex-end;">
     <div style="height:30px;">div1</div>
     <div style="height:20px;">div2</div>
     <div style="height:50px;">div3</div>
@@ -273,26 +273,26 @@ align-items 设置弹性盒子元素在**纵向**上的对齐方式。<br>
 ```html
 <style>
     /*设置父元素为flex布局*/
-    .d5{
+    .d6{
         display:flex;
         padding:5px;
         border:1px solid blue;
         width:200px;
     }
-    .d5 div{
+    .d6 div{
         width:60px;
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>不换行的效果：</div>
-<div class="d5" style="flex-wrap:nowrap;">
+<div class="d6" style="flex-wrap:nowrap;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>换行的效果：</div>
-<div class="d5" style="flex-wrap:wrap;">
+<div class="d6" style="flex-wrap:wrap;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
@@ -301,26 +301,26 @@ align-items 设置弹性盒子元素在**纵向**上的对齐方式。<br>
 ::: details 点击查看效果
 <style>
     /*设置父元素为flex布局*/
-    .d5{
+    .d6{
         display:flex;
         padding:5px;
         border:1px solid blue;
         width:200px;
     }
-    .d5 div{
+    .d6 div{
         width:60px;
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>不换行的效果：</div>
-<div class="d5" style="flex-wrap:nowrap;">
+<div class="d6" style="flex-wrap:nowrap;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
 </div>
 <div>换行的效果：</div>
-<div class="d5" style="flex-wrap:wrap;">
+<div class="d6" style="flex-wrap:wrap;">
     <div>div1</div>
     <div>div2</div>
     <div>div3</div>
@@ -332,24 +332,24 @@ align-items 设置弹性盒子元素在**纵向**上的对齐方式。<br>
 ```html
 <style>
     /*设置父元素为flex布局*/
-    .d6{
+    .d7{
         display:flex;
         padding:5px;
         border:1px solid blue;
         width:200px;
     }
-    .d6 div{
+    .d7 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>平分组合的效果：</div>
-<div class="d6">
+<div class="d7">
     <div style="flex:1;">div1</div>
     <div style="flex:1;">div2</div>
 </div>
 <div>一二组合的效果：</div>
-<div class="d6">
+<div class="d7">
     <div style="flex:1;">div1</div>
     <div style="flex:2;">div2</div>
 </div>
@@ -357,24 +357,24 @@ align-items 设置弹性盒子元素在**纵向**上的对齐方式。<br>
 ::: details 点击查看效果
 <style>
     /*设置父元素为flex布局*/
-    .d6{
+    .d7{
         display:flex;
         padding:5px;
         border:1px solid blue;
         width:200px;
     }
-    .d6 div{
+    .d7 div{
         border:1px solid red;
         margin: 0 10px;
     }
 </style>
 <div>平分组合的效果：</div>
-<div class="d6">
+<div class="d7">
     <div style="flex:1;">div1</div>
     <div style="flex:1;">div2</div>
 </div>
 <div>一二组合的效果：</div>
-<div class="d6">
+<div class="d7">
     <div style="flex:1;">div1</div>
     <div style="flex:2;">div2</div>
 </div>

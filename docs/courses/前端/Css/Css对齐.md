@@ -18,23 +18,23 @@ tags:
 - 前提是要给该元素设置**一定的宽度**，不然可能看不到居中效果
 ```html
 <style>
-    .d1{
+    .d9{
         width:100px;
         border:1px solid red;
         margin:auto;
     }
 </style>
-<div class="d1">元素居中</div>
+<div class="d9">元素居中</div>
 ```
 ::: details 点击查看效果
 <style>
-    .d1{
+    .d9{
         width:100px;
         border:1px solid red;
         margin:auto;
     }
 </style>
-<div class="d1">元素居中</div>
+<div class="d9">元素居中</div>
 :::
 
 ## 文本居中
@@ -42,23 +42,23 @@ tags:
 它的值还有`left`(居左)、`right`(居右)
 ```html
 <style>
-    .d2{
+    .d10{
         width:100px;
         border:1px solid red;
         text-align:center;
     }
 </style>
-<div class="d2">文本居中</div>
+<div class="d10">文本居中</div>
 ```
 ::: details 点击查看效果
 <style>
-    .d2{
+    .d10{
         width:100px;
         border:1px solid red;
         text-align:center;
     }
 </style>
-<div class="d2">文本居中</div>
+<div class="d10">文本居中</div>
 :::
 
 ## float浮动
@@ -68,25 +68,25 @@ tags:
 - 元素浮动之后，周围的元素会重新排列，为了避免这种情况，**使用 clear 属性清除周围的浮动元素**。
 ```html
 <style>
-    .d3{
+    .d11{
         border:1px solid red;
         float:right;
     }
 </style>
-<div class="d3">浮动居右</div>
-<div class="d3">浮动居右</div>
+<div class="d11">浮动居右</div>
+<div class="d11">浮动居右</div>
 <div style="clear:both;"></div>
 <div>不浮动元素</div>
 ```
 ::: details 点击查看效果
 <style>
-    .d3{
+    .d11{
         border:1px solid red;
         float:right;
     }
 </style>
-<div class="d3">浮动居右</div>
-<div class="d3">浮动居右</div>
+<div class="d11">浮动居右</div>
+<div class="d11">浮动居右</div>
 <div style="clear:both;"></div>
 <div>不浮动元素</div>
 :::
@@ -96,37 +96,37 @@ tags:
 - 一般我们也会设置为flex布局，通过`align-items:center;`来解决垂直居中
 ```html
 <style>
-    .d4{
+    .d12{
         border:1px solid red;
         height:100px;
         line-height:100px;
     }
-    .d5{
+    .d13{
         display:flex;
         align-items:center;
         border:1px solid red;
         height:100px;
     }
 </style>
-<div class="d4">line-height设置垂直居中</div>
-<div class="d5">flex布局设置垂直居中</div>
+<div class="d12">line-height设置垂直居中</div>
+<div class="d13">flex布局设置垂直居中</div>
 ```
 ::: details 点击查看效果
 <style>
-    .d4{
+    .d12{
         border:1px solid red;
         height:100px;
         line-height:100px;
     }
-    .d5{
+    .d13{
         display:flex;
         align-items:center;
         border:1px solid red;
         height:100px;
     }
 </style>
-<div class="d4">line-height设置垂直居中</div>
-<div class="d5">flex布局设置垂直居中</div>
+<div class="d12">line-height设置垂直居中</div>
+<div class="d13">flex布局设置垂直居中</div>
 :::
 
 ## 水平垂直居中
@@ -135,21 +135,21 @@ tags:
 - 通过`line-height`和`text-align`属性来实现水平垂直居中
 ```html
 <style>
-    .d6{
+    .d14{
         position:absolute;
         left:50%;
         top:50%;
         /*向左向上各自移动自身宽度高度的50%*/
         transform:translate(-50%,-50%);
     }
-    .d7{
+    .d15{
         display:flex;
         align-items:center;
         justify-content:center;
         height:100px;
         border:1px solid red;
     }
-    .d8{
+    .d16{
         text-align:center;
         line-height:100px;
         height:100px;
@@ -157,27 +157,28 @@ tags:
     }
 </style>
 <div style="position:relative;height:100px;border:1px solid red;">
-    <div class="d6">绝对定位实现水平垂直居中</div>
+    <div class="d14">绝对定位实现水平垂直居中</div>
 </div>
-<div class="d7">flex布局实现水平垂直居中</div>
-<div class="d8">text-align和line-height实现水平垂直居中</div>
+<div class="d15">flex布局实现水平垂直居中</div>
+<div class="d16">text-align和line-height实现水平垂直居中</div>
 ```
 ::: details 点击查看效果
 <style>
-    .d6{
+    .d14{
         position:absolute;
         left:50%;
         top:50%;
+        /*向左向上各自移动自身宽度高度的50%*/
         transform:translate(-50%,-50%);
     }
-    .d7{
+    .d15{
         display:flex;
         align-items:center;
         justify-content:center;
         height:100px;
         border:1px solid red;
     }
-    .d8{
+    .d16{
         text-align:center;
         line-height:100px;
         height:100px;
@@ -185,9 +186,9 @@ tags:
     }
 </style>
 <div style="position:relative;height:100px;border:1px solid red;">
-    <div class="d6">绝对定位实现水平垂直居中</div>
+    <div class="d14">绝对定位实现水平垂直居中</div>
 </div>
-<div class="d7">flex布局实现水平垂直居中</div>
-<div class="d8">text-align和line-height实现水平垂直居中</div>
+<div class="d15">flex布局实现水平垂直居中</div>
+<div class="d16">text-align和line-height实现水平垂直居中</div>
 :::
 

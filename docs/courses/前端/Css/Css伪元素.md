@@ -24,13 +24,13 @@ CSS伪元素是用来添加一些选择器的**特殊效果**。
 ## 效果如下
 ```html
 <style>
-    .d1:before{
+    .d17:before{
         content:'插入前面的内容'
     }
-    .d1:after{
+    .d17:after{
         content:'插入后面的内容'
     }
-    .d2:hover{
+    .d18:hover{
         color:red;
     }
     .input:focus{
@@ -38,31 +38,31 @@ CSS伪元素是用来添加一些选择器的**特殊效果**。
         border:1px solid red;
         outline:none;
     }
-    .d3>.d4:first-child{
+    .d19>.d20:first-child{
         border:1px solid red;
     }
-    .d3>.d4:last-child{
+    .d19>.d20:last-child{
         border:1px solid blue;
     }
 </style>
-<div class="d1">｜before和after效果｜</div>
-<div class="d2">:hover效果：鼠标移到我上面变红色</div>
+<div class="d17">｜before和after效果｜</div>
+<div class="d18">:hover效果：鼠标移到我上面变红色</div>
 <input class="input" placeholder=":focus效果:点击聚焦"/>
-<div class="d3" style="margin-top:10px">
-    <div class="d4">:first-child的效果</div>
-    <div class="d4">div</div>
-    <div class="d4">:last-child的效果</div>
+<div class="d19" style="margin-top:10px">
+    <div class="d20">:first-child的效果</div>
+    <div class="d20">div</div>
+    <div class="d20">:last-child的效果</div>
 </div>
 ```
 ::: details 点击查看效果
 <style>
-    .d1:before{
+    .d17:before{
         content:'插入前面的内容'
     }
-    .d1:after{
+    .d17:after{
         content:'插入后面的内容'
     }
-    .d2:hover{
+    .d18:hover{
         color:red;
     }
     .input:focus{
@@ -70,19 +70,19 @@ CSS伪元素是用来添加一些选择器的**特殊效果**。
         border:1px solid red;
         outline:none;
     }
-    .d3>.d4:first-child{
+    .d19>.d20:first-child{
         border:1px solid red;
     }
-    .d3>.d4:last-child{
+    .d19>.d20:last-child{
         border:1px solid blue;
     }
 </style>
-<div class="d1">｜before和after效果｜</div>
-<div class="d2">:hover效果：鼠标移到我上面变红色</div>
+<div class="d17">｜before和after效果｜</div>
+<div class="d18">:hover效果：鼠标移到我上面变红色</div>
 <input class="input" placeholder=":focus效果:点击聚焦"/>
-<div class="d3" style="margin-top:10px">
-    <div class="d4">:first-child的效果</div>
-    <div class="d4">div</div>
-    <div class="d4">:last-child的效果</div>
+<div class="d19" style="margin-top:10px">
+    <div class="d20">:first-child的效果</div>
+    <div class="d20">div</div>
+    <div class="d20">:last-child的效果</div>
 </div>
 :::

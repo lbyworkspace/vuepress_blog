@@ -24,18 +24,18 @@ Css用overflow来设置**元素内溢出**的问题
 ## 效果展示
 ```html
 <style>
-    .d1{
+    .d8{
         width:300px;
         height:100px;
         border:1px solid blue;
         padding:5px;
     }
-    .d1 div{
+    .d8 div{
         background:red;
     }
 </style>
 <div>这是visible效果(默认)：</div>
-<div class="d1" style="margin-bottom:40px;">
+<div class="d8" style="margin-bottom:40px;">
     <div>文本内容会超出父元素</div>
     <div>文本内容会超出父元素</div>
     <div>文本内容会超出父元素</div>
@@ -45,7 +45,7 @@ Css用overflow来设置**元素内溢出**的问题
     <div>文本内容会超出父元素</div>
 </div>
 <div>这是hidden效果：</div>
-<div class="d1" style="overflow:hidden;">
+<div class="d8" style="overflow:hidden;">
     <div>文本内容超出部分会被隐藏</div>
     <div>文本内容超出部分会被隐藏</div>
     <div>文本内容超出部分会被隐藏</div>
@@ -55,7 +55,7 @@ Css用overflow来设置**元素内溢出**的问题
     <div>文本内容超出部分会被隐藏</div>
 </div>
 <div>这是scroll效果：</div>
-<div class="d1" style="overflow:scroll;">
+<div class="d8" style="overflow:scroll;">
     <div>文本内容是可以滚动的</div>
     <div>文本内容是可以滚动的</div>
     <div>文本内容是可以滚动的</div>
@@ -65,7 +65,7 @@ Css用overflow来设置**元素内溢出**的问题
     <div>文本内容是可以滚动的</div>
 </div>
 <div>这是auto效果：</div>
-<div class="d1" style="overflow:auto;">
+<div class="d8" style="overflow:auto;">
     <div>文本内容，内容如果超出则显示滚动条</div>
     <div>文本内容，内容如果超出则显示滚动条</div>
     <div>文本内容，内容如果超出则显示滚动条</div>
@@ -77,18 +77,18 @@ Css用overflow来设置**元素内溢出**的问题
 ```
 ::: details 点击查看效果
 <style>
-    .d1{
+    .d8{
         width:300px;
         height:100px;
         border:1px solid blue;
         padding:5px;
     }
-    .d1 div{
+    .d8 div{
         background:red;
     }
 </style>
 <div>这是visible效果(默认)：</div>
-<div class="d1" style="margin-bottom:40px;">
+<div class="d8" style="margin-bottom:40px;">
     <div>文本内容会超出父元素</div>
     <div>文本内容会超出父元素</div>
     <div>文本内容会超出父元素</div>
@@ -98,7 +98,7 @@ Css用overflow来设置**元素内溢出**的问题
     <div>文本内容会超出父元素</div>
 </div>
 <div>这是hidden效果：</div>
-<div class="d1" style="overflow:hidden;">
+<div class="d8" style="overflow:hidden;">
     <div>文本内容超出部分会被隐藏</div>
     <div>文本内容超出部分会被隐藏</div>
     <div>文本内容超出部分会被隐藏</div>
@@ -108,7 +108,7 @@ Css用overflow来设置**元素内溢出**的问题
     <div>文本内容超出部分会被隐藏</div>
 </div>
 <div>这是scroll效果：</div>
-<div class="d1" style="overflow:scroll;">
+<div class="d8" style="overflow:scroll;">
     <div>文本内容是可以滚动的</div>
     <div>文本内容是可以滚动的</div>
     <div>文本内容是可以滚动的</div>
@@ -118,7 +118,7 @@ Css用overflow来设置**元素内溢出**的问题
     <div>文本内容是可以滚动的</div>
 </div>
 <div>这是auto效果：</div>
-<div class="d1" style="overflow:auto;">
+<div class="d8" style="overflow:auto;">
     <div>文本内容，内容如果超出则显示滚动条</div>
     <div>文本内容，内容如果超出则显示滚动条</div>
     <div>文本内容，内容如果超出则显示滚动条</div>
