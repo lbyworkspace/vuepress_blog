@@ -97,11 +97,12 @@ module.exports = {
                     ]
                 },
                 {
-                    title:'CSS',
+                    title:'Css',
                     collapsable:true,
                     children:[
                         'Css/Css简介','Css/Css语法','Css/Css选择器','Css/Css样式表','Css/Css基本样式',
-                        'Css/Css定位','Css/Css显示','Css/Css弹性盒子','Css/Css溢出'
+                        'Css/Css定位','Css/Css显示','Css/Css弹性盒子','Css/Css溢出','Css/Css对齐',
+                        'Css/Css伪元素','Css/Css进阶样式'
                     ]
                 },
             ],
