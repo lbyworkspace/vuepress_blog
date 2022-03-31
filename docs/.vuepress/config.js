@@ -3,7 +3,7 @@ module.exports = {
     title:'BaoStudy',
     theme:'reco',
     head: [
-        // ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
+        ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
         ['meta',{ name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['script', { src:'/js/bodyclick.js'}]
     ],
@@ -103,6 +103,13 @@ module.exports = {
                         'Css/Css简介','Css/Css语法','Css/Css选择器','Css/Css样式表','Css/Css基本样式',
                         'Css/Css定位','Css/Css显示','Css/Css弹性盒子','Css/Css溢出','Css/Css对齐',
                         'Css/Css伪元素','Css/Css进阶样式'
+                    ]
+                },
+                {
+                    title:'JavaScript',
+                    collapsable:true,
+                    children:[
+                        'Js/Js简介.md','Js/Js用法','Js/Js调试','Js/Js变量','Js/Js数据类型','Js/Js函数'
                     ]
                 },
             ],
