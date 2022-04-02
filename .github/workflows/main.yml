@@ -29,3 +29,13 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: static
           FOLDER: docs/.vuepress/dist
+      
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: -rltgoDzvO --delete
+          SOURCE: docs/.vuepress/dist
+          REMOTE_HOST: 42.192.146.54
+          REMOTE_USER: root
+          TARGET: /home/blog/
