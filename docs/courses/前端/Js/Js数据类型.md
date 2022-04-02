@@ -55,8 +55,25 @@ var date = new Date();
 ```
 
 ## 判断类型的方法
-- typeof
-- 
+### typeof
+- 检测基本数据类型时没有问题，但是当其对引用类型进行检测时，会返回object，这样就无法进行精准的判断，这样也不足为奇，因为所有的对象其**原型链**最终都指向了object
+- 需要注意`null=>object`,`Funtion=>function`
+```js
+console.log(typeof 123);  //'number'
+console.log(typeof '123');  //'string'
+console.log(typeof true);  //'boolean'
+console.log(typeof null);  //'object'
+console.log(typeof undefined);  //'undefined'
+console.log(typeof Symbol('id'));  //'symbol'
+console.log(typeof {});  //'object'
+console.log(typeof []);  //'object'
+console.log(typeof function(){});  //'function'
+console.log(typeof /.*/);  //'object'
+console.log(typeof new Date());  //'object'
+```
+
+### instanceof
+
 
 
 ## 弱类型语言的优缺点

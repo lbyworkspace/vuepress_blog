@@ -27,6 +27,10 @@ module.exports = {
                 icon:'reco-tag'
             }
         },
+        valineConfig: {
+            appId: 'bg15QCQqUNoON4gP1xSPRviz-gzGzoHsz',
+            appKey: 'xtnkTLsNXYUKTpPIhxjr0y6c'
+        },
         nav: [
             {
                 text: "首页",
