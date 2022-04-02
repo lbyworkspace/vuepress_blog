@@ -38,4 +38,4 @@ jobs:
           SOURCE: docs/.vuepress/dist
           REMOTE_HOST: www.workdomain.cloud
           REMOTE_USER: root
-          TARGET: /home/blog/dist/
+          TARGET: /home/blog/
