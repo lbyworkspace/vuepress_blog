@@ -22,13 +22,13 @@ jobs:
       - name: Build
         run:  npm install && npm run build
 
-      # 部署到 GitHub Pages
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: static
-          FOLDER: docs/.vuepress/dist
+      # # 部署到 GitHub Pages
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      #     BRANCH: static
+      #     FOLDER: docs/.vuepress/dist
       
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
