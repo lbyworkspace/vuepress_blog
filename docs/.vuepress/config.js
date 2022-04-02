@@ -3,7 +3,7 @@ module.exports = {
     title:'BaoStudy',
     theme:'reco',
     head: [
-        ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
+        // ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
         ['meta',{ name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['script', { src:'/js/bodyclick.js'}]
     ],
@@ -49,6 +49,10 @@ module.exports = {
                     {
                         text: "前端",
                         link: "/courses/前端/前端简介"
+                    },
+                    {
+                        text: "Maven",
+                        link: "/courses/Maven/Maven简介"
                     }
                 ]
             }
@@ -112,6 +116,9 @@ module.exports = {
                         'Js/Js简介.md','Js/Js用法','Js/Js调试','Js/Js变量','Js/Js数据类型','Js/Js函数'
                     ]
                 },
+            ],
+            '/courses/Maven/':[
+                'Maven简介','Maven环境配置','Maven生命周期','Maven入门'
             ],
             '/notes/':[
                 '笔记前言',

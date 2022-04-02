@@ -28,6 +28,37 @@ js的数据类型分为**基本类型**和**引用类型**
 - 正则(RegExp)
 - 日期(Date)
 
+## 声明各种类型
+```js
+//声明字符串类型，字符串是有''包裹着的
+var str = '123';
+//声明数字类型
+var number = 123;
+//声明布尔类型
+var boolean = true;
+//声明null
+var empty = null;
+//声明undefined
+var nodefined = undefined;
+//声明Symbol
+var symbol = Symbol('id');
+//声明对象Object
+var ob = {};
+//声明数组Array
+var arr = [];
+//声明函数Function
+var func = function(){};
+//声明正则对象
+var regexp = /.*/; //正则对象也可以使用构造函数来构建
+//声明日期对象
+var date = new Date();
+```
+
+## 判断类型的方法
+- typeof
+- 
+
+
 ## 弱类型语言的优缺点
 Js属于一门弱类型的动态编程语言，什么是弱类型呢？<br>
 弱类型就是定义变量的时候**不必声明它的类型**，即Js内置的**v8引擎**会动态的分析你的变量类型<br>
