@@ -18,11 +18,11 @@ jobs:
         with:
           persist-credentials: false
 
-      # # 生成静态文件
-      # - name: Build
-      #   run:  npm install && npm run build
+      # 生成静态文件
+      - name: Build
+        run:  npm install && npm run build  
 
-      # # 部署到 GitHub Pages
+      # # 部署到 GitHub Pages 
       # - name: Deploy
       #   uses: JamesIves/github-pages-deploy-action@releases/v3
       #   with:
@@ -35,7 +35,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: -rltgoDzvO --delete
-          SOURCE: docs
+          SOURCE: docs/.vuepress/dist
           REMOTE_HOST: www.workdomain.cloud
           REMOTE_USER: root
           TARGET: /home/blog/dist/
