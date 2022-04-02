@@ -3,7 +3,7 @@ module.exports = {
     title:'BaoStudy',
     theme:'reco',
     head: [
-        // ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
+        ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
         ['meta',{ name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['script', { src:'/js/bodyclick.js'}]
     ],
