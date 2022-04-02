@@ -28,7 +28,7 @@ jobs:
       #   with:
       #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       #     BRANCH: static
-      #     FOLDER: docs/.vuepress/dist 
+      #     FOLDER: docs/.vuepress/dist  
       
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
