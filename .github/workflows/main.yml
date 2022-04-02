@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Deploy to Server
 
 # 触发条件：在 push 到 master 分支后
 on:
