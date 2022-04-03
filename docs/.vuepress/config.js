@@ -117,7 +117,7 @@ module.exports = {
                     title:'JavaScript',
                     collapsable:true,
                     children:[
-                        'Js/Js简介.md','Js/Js用法','Js/Js调试','Js/Js变量','Js/Js数据类型','Js/Js函数'
+                        'Js/Js简介.md','Js/Js用法','Js/Js调试','Js/Js变量','Js/Js数据类型','Js/Js函数','Js/Js正则表达式','Js/Js中this'
                     ]
                 },
             ],

@@ -73,6 +73,32 @@ console.log(typeof new Date());  //'object'
 ```
 
 ### instanceof
+- 用来判断A是否是B的实例，是的话就返回true，不是就返回false。当 A 的 _proto_ 指向 B 的 prototype 时，就认为A就是B的实例。
+- instanceof只能用来检测两个对象是否在一条原型链上，并不能检测出对象的具体类型。
+- instanceof只能检测**引用类型**,基本类型不属于对象创建的实例
+```js
+var arr = [1,2,3]
+//Array的原型链是Array->Object->null
+arr instanceof Array //true
+arr instanceof Object //true
+//Function的原型链是Function->Object->null
+arr instanceof Function //false
+
+var str1 = '123'
+var str2 = new String('123');
+str1 instanceof String //false
+str2 instanceof String //true
+``` 
+
+### Object.prototype.toString()
+toString方法默认返回其调用者的具体类型,**this指向的对象类型**,所以我们可以**使用`call()`方法**来改变其指向的this
+```js
+Object.prototype.toString().call([1,2,3]) //'[object Array]'
+Object.prototype.toString().call(123) //'[object Number]'
+Object.prototype.toString().call('123') //'[object String]'
+Object.prototype.toString().call(true) //'[object Boolean]'
+Object.prototype.toString().call(()=>{}) //'[object Function]'
+```
 
 
 
