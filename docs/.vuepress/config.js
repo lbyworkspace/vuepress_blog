@@ -3,7 +3,7 @@ module.exports = {
     title:'BaoStudy',
     theme:'reco',
     head: [
-        ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
+        // ['meta',{ 'http-equiv':'Content-Security-Policy',content:'upgrade-insecure-requests'}],
         ['meta',{ name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['script', { src:'/js/bodyclick.js'}]
     ],
@@ -118,7 +118,8 @@ module.exports = {
                     collapsable:true,
                     children:[
                         'Js/Js简介.md','Js/Js用法','Js/Js调试','Js/Js变量','Js/Js数据类型','Js/Js函数','Js/Js正则表达式','Js/Js this',
-                        'Js/Js JSON','Js/Js定时器','Js/Js Promise','Js/Js对象','Js/Js字符串','Js/Js数组','Js/Js日期'
+                        'Js/Js JSON','Js/Js定时器','Js/Js Promise','Js/Js对象','Js/Js字符串','Js/Js数组','Js/Js日期','Js/Js Math',
+                        'Js/Js DOM','Js/Js BOM'
                     ]
                 },
             ],
