@@ -62,7 +62,11 @@ module.exports = {
                     {
                         text: "Maven",
                         link: "/courses/Maven/Maven简介"
-                    }
+                    },
+                    // {
+                    //     text: "服务器",
+                    //     link: "/courses/服务器/服务器简介"
+                    // },
                 ]
             }
         ],
@@ -127,9 +131,26 @@ module.exports = {
                         'Js/Js DOM','Js/Js BOM','Js/Js深浅拷贝'
                     ]
                 },
+                // {
+                //     title:'Vue',
+                //     collapsable:true,
+                //     children:[
+                //         'Vue/Vue简介.md','Vue/Vue2安装'
+                //     ]
+                // },
             ],
             '/courses/Maven/':[
                 'Maven简介','Maven环境配置','Maven生命周期','Maven入门'
+            ],
+            '/courses/服务器/':[
+                '服务器简介',
+                {
+                    title:'Tomcat',
+                    collapsable:true,
+                    children:[
+                        'Tomcat/Tomcat简介'
+                    ]
+                },
             ],
             '/notes/':[
                 '笔记前言',
