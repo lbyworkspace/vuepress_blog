@@ -8,7 +8,7 @@ tags:
  - JavaScript
 ---
 
-## 抛出问题
+## 引出问题
 ```js
 let a = {
     age:1
@@ -35,3 +35,50 @@ console.log(b.age) //2
 ![image-20220404113038560](https://workdomain.cloud/picgo/image-20220404113038560.png)
 那要是在堆内存中也开辟一个新的内存专门为b存放值，就像基本类型那样，岂不就达到**深拷贝**的效果了<br>
 ![image-20220404113014940](https://workdomain.cloud/picgo/image-20220404113014940.png)
+
+## 深浅拷贝
+深拷贝和浅拷贝是只针对**Object**和**Array**这样的引用数据类型的。
+- 浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。
+- 深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。
+
+### 浅拷贝的实现方式
+`Object.assign()`:方法可以把任意多个的源对象自身的可枚举属性拷贝给目标对象，然后返回目标对象
+::: warning
+Object.assign()方法拷贝的对象第一层属于**深拷贝**
+:::
+```js
+//拷贝一个对象
+var ob1 = {name:'lby',a:{age:21}}  
+var ob2 = Object.assign({},ob1)  //{name:'lby',a:{age:21}}
+
+ob2.name = 'hhh'
+ob2.a.age = 24
+console.log(ob1.name) //'lby'
+console.log(ob2.a.age)  //24
+
+//拷贝一个数组
+var arr1 = [1,{a:2},3,4]
+var arr2 = Object.assign([],arr1)  //[1,{a:2},3,4]
+
+arr1.splice(0,1) //[{a:2},3,4]
+console.log(arr2)  //[1,{a:2},3,4]
+
+arr1[0].a = 10
+console.log(arr2)  //[1,{a:10},3,4]
+```
+
+### 深拷贝的实现方法
+`JSON.parse(JSON.stringify())`:用JSON.stringify将对象转成JSON字符串，再用JSON.parse()把字符串解析成对象，一去一来，新的对象产生了，而且对象会开辟新的栈，实现深拷贝。
+::: warning 
+这种方法虽然可以实现数组或对象深拷贝,**但不能处理函数**
+:::
+```js
+var ob1 = {name:'lby',a:{age:21},func:function(){}} 
+var ob2 = JSON.parse(JSON.stringify(ob1))  //{name:'lby',a:{age:21}}   函数不能处理
+
+ob1.name = 'hhh'
+ob1.a.age = 24
+
+console.log(ob1)  //{name:'hhh',a:{age:24},func:function(){}} 
+console.log(ob2)  //{name:'lby',a:{age:21}} 
+```
