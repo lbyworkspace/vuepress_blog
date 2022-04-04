@@ -25,7 +25,12 @@ module.exports = {
                 location: 2,
                 text: '标签',
                 icon:'reco-tag'
-            }
+            },
+            category: {
+                location: 2,
+                text: "分类",
+                icon: "reco-menu",
+            },
         },
         valineConfig: {
             appId: 'bg15QCQqUNoON4gP1xSPRviz-gzGzoHsz',
@@ -119,7 +124,7 @@ module.exports = {
                     children:[
                         'Js/Js简介.md','Js/Js用法','Js/Js调试','Js/Js变量','Js/Js数据类型','Js/Js函数','Js/Js正则表达式','Js/Js this',
                         'Js/Js JSON','Js/Js定时器','Js/Js Promise','Js/Js对象','Js/Js字符串','Js/Js数组','Js/Js日期','Js/Js Math',
-                        'Js/Js DOM','Js/Js BOM'
+                        'Js/Js DOM','Js/Js BOM','Js/Js深浅拷贝'
                     ]
                 },
             ],
