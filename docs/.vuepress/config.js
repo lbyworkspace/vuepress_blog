@@ -131,13 +131,34 @@ module.exports = {
                         'Js/Js DOM','Js/Js BOM','Js/Js深浅拷贝'
                     ]
                 },
-                // {
-                //     title:'Vue',
-                //     collapsable:true,
-                //     children:[
-                //         'Vue/Vue简介.md','Vue/Vue2安装'
-                //     ]
-                // },
+                {
+                    title:'Vue',
+                    collapsable:true,
+                    children:[
+                        'Vue/Vue简介.md','Vue/Vue模版语法.md',
+                        {
+                            title:'Vue2',
+                            collapsable:true,
+                            children:[
+                                'Vue/Vue2/Vue2安装.md'
+                            ]
+                        },
+                        {
+                            title:'Vue3',
+                            collapsable:true,
+                            children:[
+                                'Vue/Vue3/Vue3简介.md','Vue/Vue3/Vue3创建.md','Vue/Vue3/Vue3 Composition API'
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title:'TypeScript',
+                    collapsable:true,
+                    children:[
+                        'Ts/Ts简介.md','Ts/Vue2中使用Ts'
+                    ]
+                },
             ],
             '/courses/Maven/':[
                 'Maven简介','Maven环境配置','Maven生命周期','Maven入门'
