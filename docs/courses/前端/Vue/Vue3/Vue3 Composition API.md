@@ -43,11 +43,64 @@ export default {
 ```
 ::: warning
 - 尽量不要与Vue2.x配置混用
+    - `setup`在`beforeCreate`之前执行一次，this是undefined,所以在setup中不能访问到Vue2.x配置（data、methos、computed...）
     - Vue2.x配置（data、methos、computed...）中可以访问到setup中的属性、方法。
-    - 但在setup中不能访问到Vue2.x配置（data、methos、computed...）。
     - 如果有重名, setup优先。
 - `setup`不能是一个**async函数**，因为返回值不再是对象, 而是`promise`, 模板看不到return对象中的属性。（后期也可以返回一个Promise实例，但需要Suspense和异步组件的配合）
+- setup的参数
+  - props：值为对象，包含：组件外部传递过来，且组件内部声明接收了的属性。
+  - context：上下文对象
+    - attrs: 值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性, 相当于 ```this.$attrs```。
+    - slots: 收到的插槽内容, 相当于 ```this.$slots```。
+    - emit: 分发自定义事件的函数, 相当于 ```this.$emit```。
 :::
+
+## 父子组件通信
+```vue
+//子组件
+<template>
+  <button @click="handler">{{name}}</button>
+</template>
+
+<script>
+export default {
+  name:'childCom',
+  props:['name'],
+  emits:['child'],
+  setup(props,context){
+    function handler(){
+      context.emit('child',props.name)
+    }
+    return {
+        handler
+    }
+  }
+}
+</script>
+
+//父组件
+<template>
+  <child name="lby" @child="handler"/>
+</template>
+
+<script>
+import child from './components/child.vue'
+export default {
+  name:'parent',
+  components:{
+    child
+  },
+  setup(){
+    function handler(value){
+      console.log(value)
+    }
+    return {
+      handler
+    }
+  }
+}
+</script>
+```
 
 ## ref函数
 - 作用: 定义一个响应式的数据
@@ -137,3 +190,15 @@ export default {
 }
 </script>
 ```
+::: warning reactive对比ref
+-  从定义数据角度对比：
+   -  ref用来定义：<strong style="color:#DD5145">基本类型数据</strong>。
+   -  reactive用来定义：<strong style="color:#DD5145">对象（或数组）类型数据</strong>。
+   -  备注：ref也可以用来定义<strong style="color:#DD5145">对象（或数组）类型数据</strong>, 它内部会自动通过```reactive```转为<strong style="color:#DD5145">代理对象</strong>。
+-  从原理角度对比：
+   -  ref通过``Object.defineProperty()``的```get```与```set```来实现响应式（数据劫持）。
+   -  reactive通过使用<strong style="color:#DD5145">Proxy</strong>来实现响应式（数据劫持）, 并通过<strong style="color:#DD5145">Reflect</strong>操作<strong style="color:orange">源对象</strong>内部的数据。
+-  从使用角度对比：
+   -  ref定义的数据：操作数据<strong style="color:#DD5145">需要</strong>```.value```，读取数据时模板中直接读取<strong style="color:#DD5145">不需要</strong>```.value```。
+   -  reactive定义的数据：操作数据与读取数据：<strong style="color:#DD5145">均不需要</strong>```.value```。
+:::
