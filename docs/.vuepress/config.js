@@ -147,7 +147,7 @@ module.exports = {
                             title:'Vue3',
                             collapsable:true,
                             children:[
-                                'Vue/Vue3/Vue3简介.md','Vue/Vue3/Vue3创建.md','Vue/Vue3/Vue3响应式原理','Vue/Vue3/Vue3 Composition API'
+                                'Vue/Vue3/Vue3简介.md','Vue/Vue3/Vue3创建.md','Vue/Vue3/Vue3响应式原理','Vue/Vue3/Vue3生命周期','Vue/Vue3/Vue3 Composition API'
                             ]
                         }
                     ]

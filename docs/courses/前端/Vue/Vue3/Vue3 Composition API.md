@@ -202,3 +202,118 @@ export default {
    -  ref定义的数据：操作数据<strong style="color:#DD5145">需要</strong>```.value```，读取数据时模板中直接读取<strong style="color:#DD5145">不需要</strong>```.value```。
    -  reactive定义的数据：操作数据与读取数据：<strong style="color:#DD5145">均不需要</strong>```.value```。
 :::
+
+## 计算属性和监视
+### computed函数
+与Vue2.x中computed配置功能一致
+```vue
+<script>
+import {computed} from 'vue'
+export default {
+  setup(){
+    ...
+    //计算属性——简写
+    let fullName = computed(()=>{
+        return person.firstName + '-' + person.lastName
+    })
+    //计算属性——完整
+    let fullName = computed({
+        get(){
+            return person.firstName + '-' + person.lastName
+        },
+        set(value){
+            const nameArr = value.split('-')
+            person.firstName = nameArr[0]
+            person.lastName = nameArr[1]
+        }
+    })
+  }
+}
+</script>
+```
+
+### watch函数
+与Vue2.x中watch配置功能一致
+但要注意deep配置的使用：
+- 如果要监视ref所定义的响应式数据，不必使用，也没有任何意义
+- 而reactive所定义的响应式数据，如果要监视对象的某个属性还是对象，那deep就生效了
+```js
+var person = {
+  name:'lby',
+  age:21,
+  job:{
+    type:'前端',
+    salary:'15K'
+  }
+}
+
+watch(()=>person.name,(newValue,oldValue)=>{
+  console.log(newValue,oldValue)
+})
+
+watch(person,(newValue,oldValue)=>{
+  console.log(newValue,oldValue)
+},{immediate:true,deep:true}})
+
+//监视某个属性要用函数返回  ()=>监视对象的属性
+//如果这个属性还是对象，则要开启deep
+watch(()=>person.job,(newValue,oldValue)=>{
+  console.log(newValue,oldValue)
+},{immediate:true,deep:true}})
+```
+
+### watchEffect函数
+在回调函数中用到什么属性，就会自动监听什么属性，只要在回调内的属性一变化就会自动执行回调
+```js
+//watchEffect所指定的回调中用到的数据只要发生变化，则直接重新执行回调。
+watchEffect(()=>{
+    const x1 = sum.value
+    const x2 = person.age
+    console.log('watchEffect配置的回调执行了')
+})
+```
+
+## 自定义hook函数
+- hook本质就是一个函数，在函数内可以对Composition API进行了封装，方便在setup函数内进行复用
+- 类似于vue2中的mixin
+```js
+//hook.js
+import {reactive,onMounted,onUnmounted} from 'vue'
+export default function hook(){
+
+    let point = reactive({x:0,y:0})
+
+     function savePoint(event){
+      point.x = event.pageX
+      point.y = event.pageY
+      //打印当前鼠标点击的位置的xy值
+      console.log(event.pageX,event.pageY)
+    }
+
+    onMounted(()=>{
+        window.addEventListener('click',savePoint)
+    })
+
+    onUnmounted(()=>{
+      window.removeEventListener('click',savePoint)
+    })
+
+    return point
+}
+```
+```vue
+<script>
+//组件内引入
+import {hook} from './hook.js'
+export default {
+    setup(){
+        let point = hook()
+        return {
+            point
+        }
+    }
+}
+</script>
+```
+
+

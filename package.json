@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "vuepress dev ./docs --temp .temp",
     "build": "vuepress build docs"
   },
   "keywords": [],
