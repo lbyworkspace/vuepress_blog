@@ -4,7 +4,8 @@ date: '2022-4-5'
 categories:
  - 教程
 tags:
- - 前端 TypeScript
+ - 前端 
+ - TypeScript
 ---
 
 ## Ts中Vue基本模版

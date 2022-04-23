@@ -316,4 +316,30 @@ export default {
 </script>
 ```
 
+## toRef、toRefs
+- toRef：创建一个 `ref` 对象，其`value`值指向另一个对象中的某个属性
+- `toRefs` 与`toRef`功能一致，但可以批量创建多个 `ref` 对象
+```vue
+<script>
+import {reactive,toRef,toRefs} from 'vue'
+export default {
+  name:'parentCom',
+  setup(){
+    var person1 = reactive({
+      name:'lby',
+      age:20,
+    })
+    let name = toRef(person,'name')
+    console.log(name)  //ObjectRefImpl {_object: Proxy, _key: 'name', _defaultValue: undefined, __v_isRef: true}
+
+    let person2 = toRefs(person)
+    console.log(person)  //{name: ObjectRefImpl, age: ObjectRefImpl}
+
+    return {
+      name,person1,person2
+    }
+  },
+}
+</script>
+```
 

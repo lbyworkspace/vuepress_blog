@@ -4,7 +4,8 @@ date: '2022-4-5'
 categories:
  - 教程
 tags:
- - 前端 TypeScript
+ - 前端 
+ - TypeScript
 ---
 
 TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准（ES6 教程）。<br>

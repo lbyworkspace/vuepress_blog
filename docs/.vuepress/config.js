@@ -63,10 +63,10 @@ module.exports = {
                         text: "Maven",
                         link: "/courses/Maven/Maven简介"
                     },
-                    // {
-                    //     text: "服务器",
-                    //     link: "/courses/服务器/服务器简介"
-                    // },
+                    {
+                        text: "服务器",
+                        link: "/courses/服务器/服务器简介"
+                    },
                 ]
             }
         ],
@@ -156,7 +156,7 @@ module.exports = {
                     title:'TypeScript',
                     collapsable:true,
                     children:[
-                        'Ts/Ts简介.md','Ts/Vue2中使用Ts'
+                        'Ts/Ts简介','Ts/Ts安装','Ts/Ts数据类型','Ts/Vue2中使用Ts'
                     ]
                 },
             ],
@@ -170,6 +170,13 @@ module.exports = {
                     collapsable:true,
                     children:[
                         'Tomcat/Tomcat简介'
+                    ]
+                },
+                {
+                    title:'Shell',
+                    collapsable:true,
+                    children:[
+                        'Shell/Shell简介','Shell/Shell变量','Shell/Shell传参','Shell/Shell运算符','Shell/Shell流程控制'
                     ]
                 },
             ],

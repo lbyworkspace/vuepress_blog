@@ -86,3 +86,25 @@ asyncTest();
 //333
 //222
 ```
+
+## Promise.all
+- 参数接受一个Promise数组
+- 所有数组内的Promise状态都为resolve时，**Promise.all()才会成功**
+- 若有一个失败，都会被认为是失败的
+```js
+var arr1 = [Promise.resolve('成功'),Promise.resolve('成功'),Promise.resolve('成功')]
+var arr2 = [Promise.resolve('成功'),Promise.reject('失败'),Promise.resolve('成功')]
+
+
+Promise.all([Promise.resolve('成功'),Promise.resolve('成功'),Promise.resolve('成功')]).then(res=>{
+    console.log(res) //['成功','成功','成功']
+}).catch(err=>{
+    console.log(err)
+})
+
+Promise.all([Promise.resolve('成功'),Promise.resolve('成功'),Promise.resolve('成功')]).then(res=>{
+    console.log(res) 
+}).catch(err=>{
+    console.log(err) //['失败']
+})
+```
