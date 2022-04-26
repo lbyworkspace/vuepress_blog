@@ -183,6 +183,7 @@ module.exports = {
             '/notes/':[
                 '笔记前言',
                 'flowable笔记',
+                'Hyperledger Fabric 基于Node.js的源码学习'
             ]
         }
     },
