@@ -343,3 +343,48 @@ export default {
 </script>
 ```
 
+## provide、inject
+- 在vue2中父子中传递数据是通过**emit**和**props**来进行通讯，而父孙组件则要通过子组件作为中间件进行通讯，写起来会特别的麻烦
+- Vue3中provide、inject就是为了解决这一问题
+- 在父组件中provide(提供)子孙组件所需要的数据
+```vue
+<script setup>
+//父组件
+import {provide} from 'vue'
+provide('ob',{name:'lby',age:22})
+</script>
+```
+- 在子孙组件中用inject进行接受
+```vue
+<script setup>
+//子孙组件
+import {inject} from 'vue'
+const ob = inject('ob')
+console.log(ob) // {name:'lby',age:22}
+</script>
+```
+
+## Options API 存在的问题
+使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改。
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image)
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image)
+
+## Composition API 的优势
+我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc0be8211fc54b6c941c036791ba4efe~tplv-k3u1fbpfcp-watermark.image)
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image)
+
+## 全局API转移
+
+  - 将全局的API，即：```Vue.xxx```调整到应用实例（```app```）上
+
+    | 2.x 全局 API（```Vue```） | 3.x 实例 API (`app`)                        |
+    | ------------------------- | ------------------------------------------- |
+    | Vue.config.xxxx           | app.config.xxxx                             |
+    | Vue.config.productionTip  | <strong style="color:#DD5145">移除</strong> |
+    | Vue.component             | app.component                               |
+    | Vue.directive             | app.directive                               |
+    | Vue.mixin                 | app.mixin                                   |
+    | Vue.use                   | app.use                                     |
+    | Vue.prototype             | app.config.globalProperties                 |
+  
