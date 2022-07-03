@@ -340,7 +340,7 @@ export default {
     }
   },
 }
-</script>
+</script> 
 ```
 
 ## provide、inject
