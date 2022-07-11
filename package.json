@@ -1,7 +1,7 @@
 {
   "name": "vuepress-reco", 
   "version": "1.0.0",
-  "description": "",
+  "description": "", 
   "scripts": {
     "dev": "vuepress dev ./docs --temp .temp",
     "build": "vuepress build docs"
